@@ -114,6 +114,8 @@ export function Label(props) {
     return (<Basic 
     // other props:
     {...props} 
+    // semantics:
+    tag={props.tag ?? 'span'} 
     // variants:
     mild={props.mild ?? true} 
     // classes:
