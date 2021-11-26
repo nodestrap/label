@@ -104,17 +104,15 @@ export function Label(props) {
     const nudeVariant = useNudeVariant(props);
     const labelVariant = useLabelVariant(props);
     // jsx:
-    return (<Basic 
-    // other props:
-    {...props} 
-    // semantics:
-    tag={props.tag ?? 'span'} 
-    // variants:
-    mild={props.mild ?? true} 
-    // classes:
-    mainClass={props.mainClass ?? sheet.main} variantClasses={[...(props.variantClasses ?? []),
+    return (React.createElement(Basic, { ...props, 
+        // semantics:
+        tag: props.tag ?? 'span', 
+        // variants:
+        mild: props.mild ?? true, 
+        // classes:
+        mainClass: props.mainClass ?? sheet.main, variantClasses: [...(props.variantClasses ?? []),
             nudeVariant.class,
             labelVariant.class,
-        ]}/>);
+        ] }));
 }
 export { Label as default };
