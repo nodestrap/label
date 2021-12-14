@@ -1,6 +1,6 @@
 {
   "name": "@nodestrap/label",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "A complementary element represents a caption for a user interface.",
   "type": "module",
   "main": "dist/Label.js",
@@ -28,11 +28,11 @@
   "homepage": "https://github.com/nodestrap/label#readme",
   "dependencies": {
     "@cssfn/css-config": "^1.0.1",
-    "@cssfn/cssfn": "^1.0.3",
-    "@cssfn/react-cssfn": "^1.0.3",
-    "@nodestrap/basic": "^4.0.3",
-    "@nodestrap/content": "^4.0.3",
-    "@nodestrap/control": "^4.0.3",
+    "@cssfn/cssfn": "^1.0.6",
+    "@cssfn/react-cssfn": "^1.0.9",
+    "@nodestrap/basic": "^4.0.4",
+    "@nodestrap/content": "^4.0.5",
+    "@nodestrap/control": "^4.0.5",
     "@types/react": "^17.0.37",
     "react": "^17.0.2"
   }
