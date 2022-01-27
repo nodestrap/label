@@ -7,8 +7,8 @@ export interface LabelVariant {
 export declare const useLabelVariant: (props: LabelVariant) => {
     class: "content" | null;
 };
-export declare const usesLabelLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesLabelVariants: () => import("@cssfn/cssfn").StyleCollection;
+export declare const usesLabelLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesLabelVariants: () => import("@cssfn/cssfn").Rule;
 export declare const useLabelSheet: import("@cssfn/types").Factory<import("jss").Classes<"main">>;
 export declare const cssProps: import("@cssfn/css-config").Refs<{}>, cssDecls: import("@cssfn/css-config").Decls<{}>, cssVals: import("@cssfn/css-config").Vals<{}>, cssConfig: import("@cssfn/css-config").CssConfigSettings;
 export interface LabelProps<TElement extends HTMLElement = HTMLElement> extends BasicProps<TElement>, NudeVariant, LabelVariant {
