@@ -17,7 +17,7 @@ usesGeneralProps, usesSuffixedProps, overwriteProps, } from '@cssfn/css-config';
 // nodestrap components:
 import { 
 // hooks:
-usesSizeVariant, usesNudeVariant, useNudeVariant, 
+usesSizeVariant, 
 // styles:
 usesBasicLayout, usesBasicVariants, Basic, } from '@nodestrap/basic';
 import { 
@@ -69,7 +69,6 @@ export const usesLabelVariants = () => {
             usesBasicVariants(),
             // layouts:
             sizes(),
-            usesNudeVariant(),
         ]),
         ...variants([
             rule('.content', {
@@ -101,7 +100,6 @@ export function Label(props) {
     // styles:
     const sheet = useLabelSheet();
     // variants:
-    const nudeVariant = useNudeVariant(props);
     const labelVariant = useLabelVariant(props);
     // jsx:
     return (React.createElement(Basic, { ...props, 
@@ -111,7 +109,6 @@ export function Label(props) {
         mild: props.mild ?? true, 
         // classes:
         mainClass: props.mainClass ?? sheet.main, variantClasses: [...(props.variantClasses ?? []),
-            nudeVariant.class,
             labelVariant.class,
         ] }));
 }
