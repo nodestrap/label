@@ -57,10 +57,6 @@ import {
     usesContentBasicLayout,
     usesContentBasicVariants,
 }                           from '@nodestrap/content'
-import {
-    // hooks:
-    usesThemeDefault,
-}                           from '@nodestrap/control'
 
 
 
@@ -86,9 +82,6 @@ export const usesLabelLayout = () => {
         ...imports([
             // layouts:
             usesBasicLayout(),
-            
-            // colors:
-            usesThemeDefault(),
         ]),
         ...style({
             // layouts:
@@ -206,6 +199,7 @@ export function Label<TElement extends HTMLElement = HTMLElement>(props: LabelPr
             
             
             // variants:
+            theme={props.theme ?? 'secondary'}
             mild={props.mild ?? true}
             
             

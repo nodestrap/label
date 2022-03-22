@@ -23,9 +23,6 @@ usesBasicLayout, usesBasicVariants, Basic, } from '@nodestrap/basic';
 import { 
 // styles:
 usesContentBasicLayout, usesContentBasicVariants, } from '@nodestrap/content';
-import { 
-// hooks:
-usesThemeDefault, } from '@nodestrap/control';
 export const useLabelVariant = (props) => {
     return {
         class: props.labelStyle ? props.labelStyle : null,
@@ -37,8 +34,6 @@ export const usesLabelLayout = () => {
         ...imports([
             // layouts:
             usesBasicLayout(),
-            // colors:
-            usesThemeDefault(),
         ]),
         ...style({
             // layouts:
@@ -106,7 +101,7 @@ export function Label(props) {
         // semantics:
         tag: props.tag ?? 'span', 
         // variants:
-        mild: props.mild ?? true, 
+        theme: props.theme ?? 'secondary', mild: props.mild ?? true, 
         // classes:
         mainClass: props.mainClass ?? sheet.main, variantClasses: [...(props.variantClasses ?? []),
             labelVariant.class,
